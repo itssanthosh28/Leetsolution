@@ -46,10 +46,16 @@ public class Solution {
             slow=slow.next;
             fast=fast.next.next;
             if(slow==fast){
-                ListNode entry=head;
-                while(entry!=slow){
+               // ListNode entry=head;
+                slow=head;
+                // while(entry!=slow){
+                //     slow=slow.next;
+                //     entry=entry.next;
+                // }
+                   while(fast!=slow){
                     slow=slow.next;
-                    entry=entry.next;
+                    //entry=entry.next;
+                    fast=fast.next;
                 }
                 return slow;
             }
