@@ -1,25 +1,26 @@
 class Solution {
     public boolean isHappy(int n) {
-    //     ArrayList<Integer> list =new ArrayList<>();
-    //     n=digitsquare(n);
-    //     while(n!=1){
-    //         if(list.contains(n)){
-    //             return false;
-    //         }
-    //             list.add(n);                     
-    //     }
-    //    return true;
+        ArrayList<Integer> list =new ArrayList<>();
+       
+        while(n!=1){
+             n=digitsquare(n);
+            if(list.contains(n)){
+                return false;
+            }
+                list.add(n);                     
+        }
+       return true;
         
-    // }
-    int slow=n;
-    int fast=n;
-    do{
-    slow=digitsquare(slow);
-    fast=digitsquare(digitsquare(fast));
-    }while(slow!=fast);
-    if(slow==1)return true;
-    return false;
     }
+    // int slow=n;
+    // int fast=n;
+    // do{
+    // slow=digitsquare(slow);
+    // fast=digitsquare(digitsquare(fast));
+    // }while(slow!=fast);
+    // if(slow==1)return true;
+    // return false;
+    // }
 
     
 
