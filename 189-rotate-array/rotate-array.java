@@ -13,6 +13,7 @@ class Solution {
          
         // }
         int n=nums.length;
+        k=k%n;
         int[] rotated=new int[n];
         for(int i=0;i<n;i++){
             rotated[i]=nums[i];
